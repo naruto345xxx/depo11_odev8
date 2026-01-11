@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <style>
+        /* Genel Ayarlar */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: #614879;
+            min-height: 100vh;
+        }
+        
+        /* SOL DİKEY MENÜ */
+        .sidebar-menu {
+            width: 250px;
+            height: 100vh;
+            background-color: #2c3e50;
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto; /* Menü uzunsa kaydırılabilir yapar */
+        }
+
+        .menu-header {
+            padding: 20px;
+            background-color: rgb(79, 73, 73);
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #ddd;
+            color: white;
+        }
+
+        .sidebar-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #f6f7f8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar-menu ul li a:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+
+
+
+        .main-container {
+            padding: 40px;
+            flex: 1; /* İçeriğin footer'ı aşağı itmesini sağlar */
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER TASARIMI */
+        footer {
+            background-color: #2c3e50;
+            color: #f6f7f8;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #e67e22;
+        }
+
+        .footer-links a {
+            color: #e67e22;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        /* MOBİL UYUM */
+        @media (max-width: 768px) {
+            .sidebar-menu { width: 60px; }
+            .sidebar-menu .menu-header b, .sidebar-menu ul li a span { display: none; }
+            .content { margin-left: 60px; }
+        }
+         /* İÇERİK ALANI */
+        .content {
+            margin-left: 250px; /* Menü genişliği kadar boşluk */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar-menu">
+        <div class="menu-header">
+            <span style="color: #7952b3;">B</span> <b>Bootstrap</b>
+        </div>
+        <ul>
+            <li><a href="giris.html">Giriş</a></li>
+            <li><a href="renkler.html">Renkler</a></li>
+            <li><a href="navbar.html">Navbar</a></li>
+            <li><a href="button.html">Buttons</a></li>
+            <li><a href="carusel.html">Carusel</a></li>
+            <li><a href="position.html">Position</a></li>
+            <li><a href="back.html">Background</a></li>
+            <li><a href="Borders.html">Border</a></li>
+            <li><a href="Display.html">Display</a></li>
+            <li><a href="Flex.html">Flex</a></li>
+            <li><a href="Card.html">Card</a></li>
+            <li><a href="Spinners.html">Spinners</a></li>
+            <li><a href="Toast.html">Toasts</a></li>
+        </ul>
+    </div>
+
+    <div class="content" id="top">
+        <div class="main-container">
+            <section id="section-intro">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow@2x.png" alt="Logo" width="100">
+                <h1>Bootstrap ile web sitenizi daha iyi hale getirin</h1>
+                <p>Güçlü, genişletilebilir ve özelliklerle dolu ön uç geliştirme araç seti. Sass ile oluşturun ve özelleştirin, önceden oluşturulmuş ızgara sistemini ve bileşenlerini kullanın ve güçlü JavaScript eklentileriyle projelerinize hayat verin.</p>
+            </section>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Bootstrap Çalışma Paneli. Tüm Hakları Saklıdır.</p>
+                <div class="footer-links">
+                    <a href="https://naruto345xxx.github.io/bootstrap_odev/">Ana Web</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
